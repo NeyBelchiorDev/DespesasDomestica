@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.resources.CriadorDeContasAReceber"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.factories.AgendamentoFinanceiroFactorie"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.factories.AgendamentoRecebimentoFactorie"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoFinanceiro"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.dao.DAO"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.dao.JPAUTIL"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.dao.AgendamentoRecebimentoDAO"/>
+<fullyQualifiedTypeName name="javax.persistence.Inheritance"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoRecebimento"/>
+<fullyQualifiedTypeName name="javax.persistence.IdClass"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+<fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="javax.persistence.Embedded"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+</qualifiedTypeNameHistroy>

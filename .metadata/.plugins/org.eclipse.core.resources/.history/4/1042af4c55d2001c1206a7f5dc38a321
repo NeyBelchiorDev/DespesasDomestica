@@ -1,0 +1,14 @@
+package br.com.br.ney.belchiofinancas.factories;
+
+import br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoFinanceiro;
+import br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoRecebimento;
+
+public class AgendamentoRecebimentoFactorie implements AgendamentoFinanceiroFactorie{
+
+	
+	public static AgendamentoFinanceiro criarAgendamentoFinanceiro() {
+		
+		return new AgendamentoRecebimento(null, 0, null, null, null, null);
+	}
+
+}

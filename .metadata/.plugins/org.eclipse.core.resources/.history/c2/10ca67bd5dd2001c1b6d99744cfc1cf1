@@ -1,0 +1,9 @@
+package br.com.br.ney.belchiofinancas.factories;
+
+import br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoFinanceiro;
+
+public interface AgendamentoFinanceiroFactorie {
+	
+	AgendamentoFinanceiro criarAgendamentoFinanceiro();
+
+}

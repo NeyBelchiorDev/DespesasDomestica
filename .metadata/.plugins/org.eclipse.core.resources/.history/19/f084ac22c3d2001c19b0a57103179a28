@@ -1,0 +1,15 @@
+package br.com.br.ney.belchiofinancas.domain.pessoas;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class Endereco {
+	
+	@Id
+	@GeneratedValue
+	private int id;
+    private Cidade cidade;
+
+}

@@ -1,0 +1,98 @@
+package br.com.br.ney.belchiofinancas.domain.pessoas;
+
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+@Entity
+public class Pessoa {
+	
+	
+	private TipoPessoa tipo;
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
+	private String nome;
+	private String sobreNome;
+	
+
+	@OneToMany(mappedBy ="pessoa" ,cascade = CascadeType.ALL)
+	private List<Endereco> enderecos = new ArrayList<Endereco>();
+	
+	
+	public Pessoa() {}
+	
+	public Pessoa(TipoPessoa tipo, int id, String nome) {
+		super();
+		this.tipo = tipo;
+		this.id = id;
+		this.nome = nome;
+	}
+	
+	public List<Endereco> getEndereco() {
+		return enderecos;
+	}
+
+	public TipoPessoa getTipo() {
+		return tipo;
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Pessoa other = (Pessoa) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
+	public void setTipo(TipoPessoa tipo) {
+		this.tipo = tipo;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSobreNome() {
+		return sobreNome;
+	}
+
+	public void setSobreNome(String sobreNome) {
+		this.sobreNome = sobreNome;
+	}
+
+	
+
+}

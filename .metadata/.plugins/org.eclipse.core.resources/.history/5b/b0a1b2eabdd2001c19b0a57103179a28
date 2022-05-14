@@ -1,0 +1,12 @@
+package br.com.br.ney.belchiofinancas.dao;
+
+public interface DAO<T> {
+	
+	
+	public void getByID(T t);
+	public void save(T t);
+	public void update(T t);
+	public void list(T t);
+	public void listAll(T t);
+
+}

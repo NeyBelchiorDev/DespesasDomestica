@@ -1,0 +1,19 @@
+package br.com.br.ney.belchiofinancas;
+
+import br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoRecebimento;
+import br.com.br.ney.belchiofinancas.factories.AgendamentoFinanceiroFactorie;
+import br.com.br.ney.belchiofinancas.factories.AgendamentoRecebimentoFactorie;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        AgendamentoFinanceiroFactorie agendamentoFinanceiroFacotry= new AgendamentoRecebimentoFactorie();
+    	
+    	
+    }
+}

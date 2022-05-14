@@ -1,0 +1,10 @@
+package br.com.br.ney.belchiofinancas.domain.pessoas;
+
+public enum TipoPessoa {
+	
+	FISICA(1),
+	JURIDICA(2);
+	
+     int valor;
+
+}

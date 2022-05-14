@@ -1,0 +1,27 @@
+package br.com.br.ney.belchiofinancas.domain.pessoas;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+
+@Entity
+public class Endereco {
+	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)	
+	private int id;
+	@ManyToOne
+	@JoinColumn(name = "id_cidade")
+    private Cidade cidade;
+	
+	String logradouro;
+	String complemento;
+	String bairro;
+	@ManyToOne()
+	@JoinColumn(name="id_pessoa")
+	private Pessoa pessoa;
+
+}

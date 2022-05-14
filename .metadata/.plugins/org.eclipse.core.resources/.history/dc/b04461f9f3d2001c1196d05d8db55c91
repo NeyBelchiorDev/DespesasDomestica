@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h1>Cadastro de Pessoas</h1>
+<h:form> 
+
+<fieldset>
+			<legend>Cadastro de Pessoas</legend>
+			<h:panelGrid columns="3">
+
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{cadastroDePessoaBean.pessoa.nome}" >
+				</h:inputText>
+				
+				<h:outputLabel value="Sobrenome:" for="titulo" />
+				<h:inputText id="titulo" value="#{cadastroDePessoaBean.pessoa.sobreNome}" >
+				</h:inputText>
+				
+				
+				<h:outputLabel value="Tipo de Pessoa:" for="titulo" />
+				<h:inputText id="titulo" value="#{cadastroDePessoaBean.pessoa.sobreNome}" >
+				</h:inputText>
+
+					<h:outputLabel value="Tipo Pessoa:" for="tipoPessoa" />
+			  <h:selectOneMenu value="#{cadastroDePessoaBean.tipoPessoa}" id="tipoPessoa">
+			
+			    <f:selectItems value="#{cadastroDePessoaBean.pessoa.tipo}" var="tipo" itemLabel="#{cadastroDePessoaBean.tipoPessoa}" itemValue="#{cadastroDePessoaBean.tipoPessoa}" />
+
+			  </h:selectOneMenu>
+
+			</h:panelGrid>
+
+
+
+</fieldset>
+
+
+
+
+</h:form>
+
+
+
+</html>

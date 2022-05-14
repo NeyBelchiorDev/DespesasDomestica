@@ -1,0 +1,14 @@
+package br.com.br.ney.belchiofinancas.dao;
+
+import java.util.List;
+
+public interface DAO<T> {
+	
+	
+	public T getByID(T t);
+	public void save(T t);
+	public void update(T t);
+	public List<T> list(T t);
+	public List<T> listAll(T t);
+
+}

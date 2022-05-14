@@ -1,0 +1,32 @@
+package br.com.br.ney.belchiofinancas;
+
+import javax.persistence.EntityManager;
+
+import br.com.br.ney.belchiofinancas.dao.DAO;
+import br.com.br.ney.belchiofinancas.dao.JPAUtil;
+import br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoRecebimento;
+import br.com.caelum.livraria.modelo.Livro;
+
+
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    
+    	
+    	
+    AgendamentoRecebimento a = new AgendamentoRecebimento();
+    
+    new DAO<Livro>(AgendamentoRecebimento.class).adiciona(a);
+    
+    
+
+   
+    	
+    }
+}

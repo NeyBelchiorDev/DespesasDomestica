@@ -1,0 +1,46 @@
+package br.com.br.ney.belchiofinancas.dao;
+
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import br.com.br.ney.belchiofinancas.domain.financeiro.AgendamentoRecebimento;
+
+public class AgendamentoRecebimentoDAO  implements DAO{
+
+	@Override
+	public Object getByID(Object t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void save(Object t) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(Object t) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List list(Object t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List listAll(Object t) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+ 
+	
+	
+
+}

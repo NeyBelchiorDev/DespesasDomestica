@@ -1,0 +1,113 @@
+package br.com.br.ney.belchiofinancas.domain.financeiro;
+
+import java.util.Date;
+
+import br.com.br.ney.belchiofinancas.domain.pessoas.Pessoa;
+
+public  abstract class AgendamentoFinanceiro {
+	
+	private Pessoa pessoa;
+	
+	
+	private int id;
+	private Double valor;
+	private Date dataAgendamento;
+	private Date dataVencimento;
+	private String descricao;
+	
+	private  AgendamentoFinanceiro() {}
+
+	
+
+	public AgendamentoFinanceiro(Pessoa pessoa, int id, Double valor, Date dataAgendamento, Date dataVencimento,
+			String descricao) {
+		super();
+		this.pessoa = pessoa;
+		this.id = id;
+		this.valor = valor;
+		this.dataAgendamento = dataAgendamento;
+		this.dataVencimento = dataVencimento;
+		this.descricao = descricao;
+	}
+
+
+
+
+	public Pessoa getPessoa() {
+		return pessoa;
+	}
+
+
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
+	}
+
+
+	public int getId() {
+		return id;
+	}
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+	public Double getValor() {
+		return valor;
+	}
+
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+
+	public Date getDataAgendamento() {
+		return dataAgendamento;
+	}
+
+
+	public void setDataAgendamento(Date dataAgendamento) {
+		this.dataAgendamento = dataAgendamento;
+	}
+
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		AgendamentoFinanceiro other = (AgendamentoFinanceiro) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+	
+	
+	
+	
+
+}

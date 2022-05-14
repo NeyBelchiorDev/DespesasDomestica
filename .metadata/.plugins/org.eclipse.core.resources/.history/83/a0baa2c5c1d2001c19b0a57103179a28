@@ -1,0 +1,20 @@
+package br.com.br.ney.belchiofinancas.domain.financeiro;
+
+import java.util.Date;
+
+import br.com.br.ney.belchiofinancas.domain.pessoas.Pessoa;
+
+public class AgendamentoRecebimento extends AgendamentoFinanceiro{
+
+	
+	public AgendamentoRecebimento(Pessoa pessoa, int id, Double valor, Date dataAgendamento, Date dataVencimento,
+			String descricao) {
+		super(pessoa, id, valor, dataAgendamento, dataVencimento, descricao);
+		
+	}
+   
+	
+
+
+
+}
