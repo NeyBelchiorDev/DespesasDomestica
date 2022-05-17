@@ -2,44 +2,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
 	xmlns:f="http://java.sun.com/jsf/core">
 
+
 <h1>Cadastro de Pessoas</h1>
-<h:form>
+<h:head />
+<h:body>
+	<h:form>
+		<h:messages id="messages" />
+		<fieldset>
+			<legend>Cadastro de Pessoas</legend>
+			<h:panelGrid columns="1">
 
-	<fieldset>
-		<legend>Cadastro de Pessoas</legend>
-		<h:panelGrid columns="1">
+				<h:outputLabel value="Nome:" for="nome" />
+				<h:inputText id="nome" value="#{cadastroDePessoaBean.pessoa.nome}" required="true" requiredMessage="Preencha o campo nome"/>
 
-			<h:outputLabel value="Nome:" for="nome" />
-			<h:inputText id="nome" value="#{cadastroDePessoaBean.pessoa.nome}">
-			</h:inputText>
-
-			<h:outputLabel value="Sobrenome:" for="sobrenome" />
-			<h:inputText id="sobrenome"
-				value="#{cadastroDePessoaBean.pessoa.sobreNome}">
-			</h:inputText>
-
-
-			<h:outputLabel value="Tipo Pessoa" for="tipoPessoa" />
-			<h:selectOneMenu value="#{cadastroDePessoaBean.tipoPessoa}"
-				id="tipoPessoa">
-
-				<f:selectItem itemValue="1" itemLabel="Física" />
-				<f:selectItem itemValue="2" itemLabel="Jurídica" />
+				<h:outputLabel value="Sobrenome:" for="sobrenome" />
+				<h:inputText id="sobrenome"
+					value="#{cadastroDePessoaBean.pessoa.sobreNome}">
+				</h:inputText>
 
 
-			</h:selectOneMenu>
+				<h:outputLabel value="Tipo Pessoa" for="tipoPessoa" />
+				<h:selectOneMenu value="#{cadastroDePessoaBean.tipoPessoa}"
+					id="tipoPessoa">
 
-		</h:panelGrid>
+					<f:selectItem itemValue="1" itemLabel="Física" />
+					<f:selectItem itemValue="2" itemLabel="Jurídica" />
 
 
+				</h:selectOneMenu>
 
-	</fieldset>
+			</h:panelGrid>
+		</fieldset>
 
 		<fieldset>
 			<legend>Endereço</legend>
-			<h:panelGrid columns="1">
+			<h:panelGrid columns="2">
 
 				<h:outputLabel value="Logradouro:" for="logradouro" />
 				<h:inputText id="logradouro"
@@ -56,17 +56,60 @@
 					value="#{cadastroDePessoaBean.endereco.bairro}">
 				</h:inputText>
 
+				<h:outputLabel value="Cep:" for="cep" />
+				<h:inputText value="#{cadastroDePessoaBean.cep}" id="cep" />
 
 
+				<h:commandButton value="Pesquisar pelo cep"
+					action="#{cadastroDePessoaBean.buscaEnderecoPeloCep}" />
+				<h:commandButton value="Salvar Endereco"
+					action="#{cadastroDePessoaBean.adicionaEndereco}">
+				</h:commandButton>
 			</h:panelGrid>
 		</fieldset>
 
+		<fieldset>
+			<legend>Enderecos Cadastrados</legend>
 
-	<h:commandButton value="Gravar" action="#{cadastroDePessoaBean.gravar}">
-		
-		
-		</h:commandButton>
-</h:form>
+			<p:dataTable value="#{cadastroDePessoaBean.enderecos}" var="endereco">
+				<p:column headerText="Identificador">
+					<h:outputText value="#{endereco.id}"/>
+				</p:column>
+				
+				
+				<p:column headerText="Logradouro">
+					<h:outputText value="#{endereco.logradouro}" />
+				</p:column>
 
+				<p:column headerText="Bairro">
+					<h:outputText value="#{endereco.bairro}" />
+				</p:column>
+
+				<p:column headerText="Complemento">
+					<h:outputText value="#{endereco.complemento}" />
+				</p:column>
+
+			</p:dataTable>
+
+
+		</fieldset>
+
+
+
+
+
+
+
+
+		<h:commandButton value="Gravar"
+			action="#{cadastroDePessoaBean.gravar}" />
+
+
+
+
+	</h:form>
+
+
+</h:body>
 
 </html>

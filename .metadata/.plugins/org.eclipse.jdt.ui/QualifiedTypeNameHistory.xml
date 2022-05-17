@@ -21,4 +21,9 @@
 <fullyQualifiedTypeName name="javax.persistence.Embedded"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+<fullyQualifiedTypeName name="javax.faces.event.ActionEvent"/>
+<fullyQualifiedTypeName name="javax.faces.event.AjaxBehaviorEvent"/>
+<fullyQualifiedTypeName name="org.jboss.jandex.Main"/>
+<fullyQualifiedTypeName name="java.util.Objects"/>
+<fullyQualifiedTypeName name="br.com.br.ney.belchiofinancas.domain.pessoas.Endereco"/>
 </qualifiedTypeNameHistroy>
